@@ -103,7 +103,7 @@ class _Home_ScreenState extends State<Home_Screen> {
         ],
         backgroundColor: Colors.white,
         title: Text(
-          "Diversity Statistics Example",
+          "Our D&I Stats",
           style: GoogleFonts.poppins(
               fontSize: 14,
               color: Colors.black.withOpacity(.8),
@@ -853,6 +853,121 @@ class _Home_ScreenState extends State<Home_Screen> {
                         ),
                       )
                     ],
+                  ),
+                ),
+
+                SizedBox(
+                  height: 30,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left:15,right: 15),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Center(
+                          child: Text(
+                            "Your Thoughts?",
+                            style: GoogleFonts.poppins(
+                                fontSize: 24,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20,right: 20),
+                          child: Theme(
+                            data: Theme.of(context).copyWith(splashColor: Colors.transparent),
+                            child: TextField(
+                              autofocus: false,
+                              style: TextStyle(fontSize: 22.0, color: Color(0xFFbdc6cf)),
+                              decoration: InputDecoration(
+                                filled: true,
+                                fillColor: Colors.white,
+                                hintText: 'Name',
+                                contentPadding:
+                                const EdgeInsets.only(left: 14.0, bottom: 8.0, top: 8.0),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white),
+                                  borderRadius: BorderRadius.circular(5.7),
+                                ),
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white),
+                                  borderRadius: BorderRadius.circular(5.7),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20,right: 20),
+                          child: Theme(
+                            data: Theme.of(context).copyWith(splashColor: Colors.transparent),
+                            child: TextField(
+                              maxLines: 5,
+                              autofocus: false,
+                              style: TextStyle(fontSize: 22.0, color: Color(0xFFbdc6cf)),
+                              decoration: InputDecoration(
+                                filled: true,
+                                fillColor: Colors.white,
+                                hintText: 'Feedback',
+                                contentPadding:
+                                const EdgeInsets.only(left: 14.0, bottom: 8.0, top: 8.0),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white),
+                                  borderRadius: BorderRadius.circular(5.7),
+                                ),
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white),
+                                  borderRadius: BorderRadius.circular(5.7),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width,
+                          height: 60,
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                left: 30, right: 30, bottom: 10),
+                            child: RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  side: BorderSide(color: Colors.black)),
+                              onPressed: () {},
+                              color: Colors.black,
+                              textColor: Colors.white,
+                              child: Text("Send Feedback".toUpperCase(),
+                                  style: GoogleFonts.poppins(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w700)),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
